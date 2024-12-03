@@ -1,6 +1,14 @@
 # HCI-TA06
 Interactive prototype for EcoCompass App
 
+Login
 
-### Contributors
- Jared Rigor, Victoria Nikolaeva, Andrew Kallai, Aaron Jarmusch, Elvis
+Account
+
+Main Menu
+
+Scanner
+
+Lists
+
+GPS
