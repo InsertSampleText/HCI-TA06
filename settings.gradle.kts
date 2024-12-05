@@ -1,3 +1,10 @@
+
+fun RepositoryHandler.tomtomArtifactory() {
+    maven("https://repositories.tomtom.com/artifactory/maven") {
+        content { includeGroupByRegex("com\\.tomtom\\..+") }
+    }
+}
+
 pluginManagement {
     repositories {
         google {
@@ -14,6 +21,7 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        tomtomArtifactory()
         google()
         mavenCentral()
     }
