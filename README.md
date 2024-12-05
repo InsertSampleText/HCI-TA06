@@ -1,14 +1,20 @@
 # HCI-TA06
+
+Eco-Compass is a smarter recycling app that contains 3 primary tasks: scanner, list, and gps.
+Below will give off more details.
 Interactive prototype for EcoCompass App
 
-Login
+Login + Sign Up Screen
 
-Account
+Account/Profile View
 
-Main Menu
+Main Menu - Contains the 3 primary tasks that show the visual hierarchy of the process of using the app
 
-Scanner
+Scanner - Scans an item and should detect whether or not it is recyclable.
 
-Lists
+Lists - A place for the user to contain items that they have scanned previously and can add, remove, sort these items
 
-GPS
+GPS - Allows for user to see the closest centers to their location and details on those centers, allowing for easy direction
+
+By:
+Victoria, Aaron, Jared, & Andrew
