@@ -6,7 +6,7 @@ Interactive prototype for EcoCompass App
 
 Login + Sign Up Screen
 
-Account/Profile View
+Account/Profile View - Shows user their progress and 'logout'
 
 Main Menu - Contains the 3 primary tasks that show the visual hierarchy of the process of using the app
 
