@@ -18,6 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
+        //Account Button
+        Button buttonAccount = findViewById(R.id.buttonAccount);
+        buttonAccount.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, account_page.class);
+            startActivity(intent);
+        });
+
+
+
+
+        //GPS Button
         Button button = findViewById(R.id.buttonGPS);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -26,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+
+
 
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
