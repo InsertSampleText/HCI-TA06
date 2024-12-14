@@ -49,7 +49,12 @@
             android:theme="@style/Theme.EcoCompass"/>
 
         <activity
-            android:name="."
+            android:name=".loginInActivity"
+            android:exported="true"
+            android:theme="@style/Theme.EcoCompass"/>
+
+        <activity
+            android:name=".signUpActivity"
             android:exported="true"
             android:theme="@style/Theme.EcoCompass"/>
     </application>
