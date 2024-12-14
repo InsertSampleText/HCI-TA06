@@ -26,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".gps_locator"
+            android:exported="true"
+            android:theme="@style/Theme.EcoCompass"/>
     </application>
 
 </manifest>
