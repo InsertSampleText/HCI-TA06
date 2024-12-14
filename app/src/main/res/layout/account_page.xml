@@ -9,8 +9,8 @@
         android:id="@+id/background_1"
         android:layout_width="352dp"
         android:layout_height="598dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="160dp"
         android:rotation="-94"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,14 +31,14 @@
         android:id="@+id/buttonLogOut"
         android:layout_width="145dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="88dp"
         android:backgroundTint="#00FFFFFF"
         android:text="Log Out"
         android:textColor="#D95454"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#D95454"
         app:strokeWidth="3dp" />
@@ -63,17 +63,129 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="serif-monospace"
         android:text="Account"
         android:textColor="#000000"
         android:textSize="45dp"
         android:textStyle="bold"
-        android:fontFamily="serif-monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.127" />
+
+    <LinearLayout
+        android:id="@+id/accountFields"
+        android:layout_width="339dp"
+        android:layout_height="362dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457">
+
+        <!--User Name-->
+
+        <TextView
+            android:id="@+id/userTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="User: "
+            android:textColor="#717744"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/userField"
+            android:layout_width="285dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Enter user name"
+            android:inputType="text"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!--Date Joined-->
+
+        <TextView
+            android:id="@+id/dateJoinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="Date Joined: "
+            android:textColor="#717744"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dateJoinedField"
+            android:layout_width="285dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Date Joined"
+            android:inputType="date"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!--Recycling Points-->
+
+        <TextView
+            android:id="@+id/pointsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="Recycle Points: "
+            android:textColor="#717744"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pointsField"
+            android:layout_width="285dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="See Points"
+            android:inputType="text"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!--Current Streak-->
+        <TextView
+            android:id="@+id/currentSteakTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="Current Streak: "
+            android:textColor="#717744"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentStreakField"
+            android:layout_width="285dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:hint="See Current Streak"
+            android:inputType="text"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
