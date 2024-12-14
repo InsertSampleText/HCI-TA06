@@ -25,6 +25,26 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Account Button
+        Button buttonAccount = findViewById(R.id.buttonAccount);
+        buttonAccount.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, accountActivity.class); // Ensure correct class name
+            startActivity(intent);
+        });
+
+        // Scanner Button
+
+        //List Button
+        Button buttonList = findViewById(R.id.buttonList);
+        buttonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //GPS Button
         Button buttonGPS = findViewById(R.id.buttonGPS);
         buttonGPS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,13 +54,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonList = findViewById(R.id.buttonList);
-        buttonList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

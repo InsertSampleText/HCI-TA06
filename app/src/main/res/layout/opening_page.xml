@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#717744">
+
+    <ImageView
+        android:id="@+id/welcome_bg1"
+        android:layout_width="609dp"
+        android:layout_height="1012dp"
+        android:layout_marginBottom="706dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/welcome_bg2"
+        app:srcCompat="@drawable/abstract_lines_1"
+        tools:layout_editor_absoluteX="-144dp" />
+
+    <ImageView
+        android:id="@+id/welcome_bg2"
+        android:layout_width="706dp"
+        android:layout_height="1065dp"
+        android:layout_marginTop="276dp"
+        android:alpha="0.3"
+        android:rotationX="180"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abstract_lines_1"
+        tools:layout_editor_absoluteX="-112dp" />
+
+    <ImageView
+        android:id="@+id/welcome_bg"
+        android:layout_width="401dp"
+        android:layout_height="349dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.131"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="222dp"
+        android:layout_height="74dp"
+        android:backgroundTint="#8A55EB"
+        android:text="Get Started"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
+
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="404dp"
+        android:layout_height="149dp"
+        android:fontFamily="serif-monospace"
+        android:lineSpacingExtra="12sp"
+        android:text="Welcome to Eco-Compass"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <TextView
+        android:id="@+id/welcome_subtitle"
+        android:layout_width="257dp"
+        android:layout_height="31dp"
+        android:lineSpacingExtra="10sp"
+        android:text="Start your recyling jounrey here!"
+        android:textColor="#FFFDFD"
+        android:textSize="16sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+</androidx.constraintlayout.widget.ConstraintLayout>
