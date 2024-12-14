@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_1"
+        android:layout_width="352dp"
+        android:layout_height="598dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="112dp"
+        android:rotation="-94"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abstract_lines_2" />
+
+    <ImageView
+        android:id="@+id/background_"
+        android:layout_width="334dp"
+        android:layout_height="227dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginBottom="532dp"
+        android:rotation="99"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/abstract_lines_2" />
+
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Log Out"
+        android:textColor="#D95454"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#D95454"
+        app:strokeWidth="3dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/back_arrow_icon"
+        app:tint="#D75353" />
+
+    <TextView
+        android:id="@+id/titleAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Account"
+        android:textColor="#000000"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
