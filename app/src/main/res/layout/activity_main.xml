@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="ECO-COMPASS"
+        android:textColor="#5E614B"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
