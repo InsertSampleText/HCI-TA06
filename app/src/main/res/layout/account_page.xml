@@ -9,9 +9,11 @@
         android:id="@+id/background_1"
         android:layout_width="352dp"
         android:layout_height="598dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="184dp"
         android:rotation="-94"
+
+        android:alpha="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abstract_lines_2" />
@@ -20,9 +22,11 @@
         android:id="@+id/background_"
         android:layout_width="334dp"
         android:layout_height="227dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginBottom="532dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="584dp"
         android:rotation="99"
+
+        android:alpha="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/abstract_lines_2" />
