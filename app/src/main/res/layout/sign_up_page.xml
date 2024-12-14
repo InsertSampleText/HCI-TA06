@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/backArrowSignUp"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:backgroundTint="#00FFFFFF"
@@ -20,7 +20,7 @@
         app:tint="#D75353" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/emailAddressSignUp"
         android:layout_width="247dp"
         android:layout_height="61dp"
         android:layout_marginBottom="564dp"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/emailTitle2"
+        android:id="@+id/emailTitleSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="584dp"
@@ -47,12 +47,25 @@
         app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/passwordTitleSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:text="Password: "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
-        android:id="@+id/buttonLoginIn2"
+        android:id="@+id/buttonCreateAccount"
         android:layout_width="275dp"
         android:layout_height="58dp"
         android:backgroundTint="#8A55EB"
-        android:text="Login"
+        android:text="Create Account"
         android:textSize="20sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,13 +75,13 @@
         app:layout_constraintVertical_bias="0.745" />
 
     <EditText
-        android:id="@+id/editPasswordLogin3"
+        android:id="@+id/editPasswordConfirmSignUp"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginBottom="392dp"
         android:backgroundTint="#D3D3D3"
         android:ems="10"
-        android:hint="Enter your Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/background_3"
+        android:id="@+id/background_1_signup"
         android:layout_width="352dp"
         android:layout_height="598dp"
         android:layout_marginTop="504dp"
@@ -89,20 +102,7 @@
         app:srcCompat="@drawable/abstract_lines_2" />
 
     <TextView
-        android:id="@+id/passwordTitleSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="500dp"
-        android:text="Password: "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/passwordTitleSignUp"
+        android:id="@+id/confirmPasswordTitleSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="404dp"
@@ -115,7 +115,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editPasswordLogin2"
+        android:id="@+id/editPasswordSignUp"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginBottom="484dp"
