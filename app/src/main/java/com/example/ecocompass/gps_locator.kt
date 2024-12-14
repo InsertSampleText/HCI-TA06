@@ -71,7 +71,7 @@ class gps_locator : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.gps_locator)
 
         initLocationProvider()
 
@@ -357,6 +357,9 @@ class gps_locator : AppCompatActivity() {
     ) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
         this,
         Manifest.permission.ACCESS_COARSE_LOCATION
+    ) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
+        this,
+        Manifest.permission.FOREGROUND_SERVICE_LOCATION
     ) == PackageManager.PERMISSION_GRANTED
 
 
@@ -376,7 +379,8 @@ class gps_locator : AppCompatActivity() {
         }.launch(
             arrayOf(
                 Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.FOREGROUND_SERVICE_LOCATION
             )
         )
 
