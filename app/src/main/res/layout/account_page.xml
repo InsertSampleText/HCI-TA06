@@ -49,7 +49,7 @@
         app:strokeWidth="3dp" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backArrowAccount"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:backgroundTint="#00FFFFFF"

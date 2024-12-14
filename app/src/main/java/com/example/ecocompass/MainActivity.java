@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // Account Button
         Button buttonAccount = findViewById(R.id.buttonAccount);
         buttonAccount.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, account_page.class); // Ensure correct class name
+            Intent intent = new Intent(MainActivity.this, accountActivity.class); // Ensure correct class name
             startActivity(intent);
         });
 
