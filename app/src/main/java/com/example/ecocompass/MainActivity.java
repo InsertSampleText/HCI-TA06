@@ -25,11 +25,20 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button button = findViewById(R.id.buttonGPS);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonGPS = findViewById(R.id.buttonGPS);
+        buttonGPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, gps_locator.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonList = findViewById(R.id.buttonList);
+        buttonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
         });
