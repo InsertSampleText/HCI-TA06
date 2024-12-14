@@ -25,11 +25,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
-
-
         //GPS Button
-        Button button = findViewById(R.id.buttonGPS);
+        // Button button = findViewById(R.id.buttonGPS);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
