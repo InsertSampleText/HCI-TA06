@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ecocompass.scanner.scannerActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Scanner Button
+        Button buttonScanner = findViewById(R.id.buttonScanner);
+        buttonScanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, scannerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //List Button
         Button buttonList = findViewById(R.id.buttonList);
