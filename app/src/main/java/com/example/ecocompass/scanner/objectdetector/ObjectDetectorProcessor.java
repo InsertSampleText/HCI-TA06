@@ -1,4 +1,3 @@
-
 package com.example.ecocompass.scanner.objectdetector;
 
 import android.content.Context;
