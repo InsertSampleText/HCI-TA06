@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+//Sources Used:
+//https://www.tutorialspoint.com/android/android_login_screen.htm
+//https://androidknowledge.com/login-page-in-android-studio/
+
 public class loginInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
