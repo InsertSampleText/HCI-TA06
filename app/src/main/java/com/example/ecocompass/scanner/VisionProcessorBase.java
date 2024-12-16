@@ -4,7 +4,6 @@ import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 import android.app.ActivityManager;
-import android.app.ActivityManager.MemoryInfo;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.SystemClock;
