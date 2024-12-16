@@ -111,7 +111,12 @@ public class ListActivity extends AppCompatActivity {
         });
 
 
-        //pop up window
+        //sources used
+        /*
+        https://developer.android.com/reference/java/util/List
+        https://stackoverflow.com/questions/4540754/how-do-you-dynamically-add-elements-to-a-listview-on-android
+        https://developer.android.com/reference/android/app/AlertDialog
+        */
 
 
     }
