@@ -192,5 +192,23 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="@+id/background_1"
+        app:layout_constraintTop_toBottomOf="@+id/accountFields" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLogOut"
+        app:layout_constraintTop_toBottomOf="@+id/accountFields" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
