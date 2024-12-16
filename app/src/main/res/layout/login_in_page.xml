@@ -38,7 +38,7 @@
         android:layout_height="66dp"
         android:backgroundTint="#00FFFFFF"
         android:text="Sign Up"
-        android:textColor="#8954E9"
+        android:textColor="#8853E7"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

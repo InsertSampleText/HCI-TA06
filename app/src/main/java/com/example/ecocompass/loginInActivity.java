@@ -1,7 +1,9 @@
 package com.example.ecocompass;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +51,19 @@ public class loginInActivity extends AppCompatActivity {
                 Intent intent = new Intent(loginInActivity.this, signUpActivity.class);
                 startActivity(intent);
             }
+
+            //Issue, can't seem to get it to work to indicate user feedback
+            public boolean onTouch(View view, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    //Default background color
+                    signUpButton.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+                } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    // Change to pressed background color
+                    signUpButton.setBackgroundColor(Color.parseColor("#CEC1EBFF"));
+                }
+                return true;
+            }
+
         });
     }
 
