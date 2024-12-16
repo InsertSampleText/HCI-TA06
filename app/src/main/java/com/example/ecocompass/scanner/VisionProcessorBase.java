@@ -40,14 +40,6 @@ public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
   protected VisionProcessorBase(Context context) {
     activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
     executor = new ScopedExecutor(TaskExecutors.MAIN_THREAD);
-    fpsTimer.schedule(
-        new TimerTask() {
-          @Override
-          public void run() {
-//            framesPerSecond = frameProcessedInOneSecondInterval;
-            frameProcessedInOneSecondInterval = 0;
-          }
-        }, 0, 1000);
   }
 
   @Override

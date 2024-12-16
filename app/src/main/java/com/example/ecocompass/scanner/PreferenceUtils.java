@@ -3,7 +3,6 @@ package com.example.ecocompass.scanner;
 import android.content.Context;
 
 import com.google.mlkit.common.model.LocalModel;
-import com.google.mlkit.vision.objects.ObjectDetectorOptionsBase.DetectorMode;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
 
 public class PreferenceUtils {
@@ -19,8 +18,7 @@ public class PreferenceUtils {
   private static CustomObjectDetectorOptions getCustomObjectDetectorOptions(
       Context context,
       LocalModel localModel,
-      @DetectorMode int mode) {
-
+      int mode) {
 
     boolean enableMultipleObjects = false;
     boolean enableClassification = true;
