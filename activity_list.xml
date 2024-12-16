@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".ListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="435dp"
+        android:layout_height="96dp"
+        android:background="#373D20"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backArrowMyList"
+        android:layout_width="106dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="668dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        android:text="Go Back"
+        app:icon="@drawable/back_arrow_icon"
+        app:iconTint="#D75353"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="103dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00FFFFFF"
+        android:layoutDirection="inherit"
+        android:text="Add Item"
+        app:icon="@drawable/add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/removeItem"
+        android:layout_width="126dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="219dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="12dp"
+        android:background="#00FFFFFF"
+        android:text="Remove Item"
+        app:icon="@drawable/minus_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Sort"
+        android:layout_width="101dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="313dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="#00FFFFFF"
+        android:text="Sort List"
+        app:icon="@drawable/sort_list_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="411dp"
+        android:layout_height="633dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.871" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="436dp"
+        android:layout_height="74dp"
+        android:background="#707643"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/navBarIcon"
+            android:layout_width="63dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="#00FFFEFE"
+            android:backgroundTint="#00D72C2C"
+            app:srcCompat="@drawable/navigation_icon"
+            app:tint="@android:color/white" />/>
+
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/eco_compass_title"
+            android:layout_width="259dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:text="ECO-COMPASS"
+            android:textColor="#FCF5FD"
+            android:textSize="34sp"
+            android:typeface="monospace" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/itemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
