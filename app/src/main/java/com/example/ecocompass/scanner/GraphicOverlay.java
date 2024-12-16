@@ -3,7 +3,6 @@ package com.example.ecocompass.scanner;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 import com.google.common.base.Preconditions;
@@ -23,7 +22,7 @@ public class GraphicOverlay extends View {
   private boolean needUpdateTransformation = true;
 
   public abstract static class Graphic {
-    private GraphicOverlay overlay;
+    private final GraphicOverlay overlay;
 
     public Graphic(GraphicOverlay overlay) {
       this.overlay = overlay;
@@ -31,14 +30,14 @@ public class GraphicOverlay extends View {
 
     public abstract void draw(Canvas canvas);
 
-    protected void drawRect(
-        Canvas canvas, float left, float top, float right, float bottom, Paint paint) {
-      canvas.drawRect(left, top, right, bottom, paint);
-    }
+//    protected void drawRect(
+//        Canvas canvas, float left, float top, float right, float bottom, Paint paint) {
+//      canvas.drawRect(left, top, right, bottom, paint);
+//    }
 
-    protected void drawText(Canvas canvas, String text, float x, float y, Paint paint) {
-      canvas.drawText(text, x, y, paint);
-    }
+//    protected void drawText(Canvas canvas, String text, float x, float y, Paint paint) {
+//      canvas.drawText(text, x, y, paint);
+//    }
 
     public float scale(float imagePixel) {
       return imagePixel * overlay.scaleFactor;
