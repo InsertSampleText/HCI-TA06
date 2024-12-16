@@ -19,13 +19,10 @@ import com.google.android.odml.image.BitmapMlImageBuilder;
 import com.google.android.odml.image.MlImage;
 import com.google.mlkit.common.MlKitException;
 import com.google.mlkit.vision.common.InputImage;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
   private static final String TAG = "VisionProcessorBase";
   private final ActivityManager activityManager;
-  private final Timer fpsTimer = new Timer();
   private final ScopedExecutor executor;
   private boolean isShutdown;
   private int numRuns = 0;
@@ -35,8 +32,6 @@ public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
   private long totalDetectorMs = 0;
   private long maxDetectorMs = 0;
   private long minDetectorMs = Long.MAX_VALUE;
-  private int frameProcessedInOneSecondInterval = 0;
-  private int framesPerSecond = 0;
   protected VisionProcessorBase(Context context) {
     activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
     executor = new ScopedExecutor(TaskExecutors.MAIN_THREAD);
@@ -105,37 +100,12 @@ false,
                 resetLatencyStats();
               }
               numRuns++;
-              frameProcessedInOneSecondInterval++;
               totalFrameMs += currentFrameLatencyMs;
               maxFrameMs = max(currentFrameLatencyMs, maxFrameMs);
               minFrameMs = min(currentFrameLatencyMs, minFrameMs);
               totalDetectorMs += currentDetectorLatencyMs;
               maxDetectorMs = max(currentDetectorLatencyMs, maxDetectorMs);
               minDetectorMs = min(currentDetectorLatencyMs, minDetectorMs);
-
-              if (frameProcessedInOneSecondInterval == 1) {
-                Log.d(TAG, "Num of Runs: " + numRuns);
-                Log.d(
-                    TAG,
-                    "Frame latency: max="
-                        + maxFrameMs
-                        + ", min="
-                        + minFrameMs
-                        + ", avg="
-                        + totalFrameMs / numRuns);
-                Log.d(
-                    TAG,
-                    "Detector latency: max="
-                        + maxDetectorMs
-                        + ", min="
-                        + minDetectorMs
-                        + ", avg="
-                        + totalDetectorMs / numRuns);
-                MemoryInfo mi = new MemoryInfo();
-                activityManager.getMemoryInfo(mi);
-                long availableMegs = mi.availMem / 0x100000L;
-                Log.d(TAG, "Memory available in system: " + availableMegs + " MB");
-              }
 
               graphicOverlay.clear();
               if (originalCameraImage != null) {
@@ -167,7 +137,6 @@ false,
     executor.shutdown();
     isShutdown = true;
     resetLatencyStats();
-    fpsTimer.cancel();
   }
 
   private void resetLatencyStats() {
