@@ -5,7 +5,7 @@ Enjoy recycling!
 
 
 
-
+### Whats in the app
 Eco-Compass is a smarter recycling app that contains 3 primary tasks: scanner, list functionailty, and gps.
 
 Below will give off more details.
