@@ -37,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.986" />
 
     <Button
         android:id="@+id/addItem"
@@ -45,7 +45,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="119dp"
         android:layout_marginEnd="201dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
         android:layoutDirection="inherit"
         android:text="Add Item"
@@ -61,13 +61,13 @@
         android:layout_height="59dp"
         android:layout_marginStart="219dp"
         android:layout_marginEnd="102dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
         android:text="Remove Item"
         app:icon="@drawable/minus_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -76,7 +76,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="313dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
         android:text="Sort List"
         app:icon="@drawable/sort_list_icon"
@@ -84,6 +84,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/itemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="764dp"
+        android:text="Info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginVertical="10dp"
+        android:text="My List"
+        android:textColor="#373D20"
+        android:textSize="34sp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 
     <ListView
         android:id="@+id/list"
@@ -94,9 +120,12 @@
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="0.871" >
+
+    </ListView>
 
     <TableRow
+        android:id="@+id/tableRow"
         android:layout_width="436dp"
         android:layout_height="74dp"
         android:background="#707643"
@@ -128,6 +157,7 @@
             android:textColor="#FCF5FD"
             android:textSize="34sp"
             android:typeface="monospace" />
+
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

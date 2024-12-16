@@ -14,6 +14,7 @@ import android.util.Pair;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
@@ -53,6 +54,12 @@ public class scannerActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
 
             setContentView(R.layout.activity_scanner);
+
+            // Back Button Functionality
+            Button backButton = findViewById(R.id.backArrowScanner);
+            backButton.setOnClickListener(v -> {
+                getOnBackPressedDispatcher().onBackPressed();
+            });
 
             findViewById(R.id.select_image_button)
                     .setOnClickListener(

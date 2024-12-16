@@ -34,7 +34,9 @@ public class loginInActivity extends AppCompatActivity {
             // Simple 'Authentication' for Proof of Concept
             if (email.equals("user@example.com") && password.equals("password")) {
                 Toast.makeText(loginInActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(loginInActivity.this, MainActivity.class));
+                Intent intent = new Intent(loginInActivity.this, MainActivity.class);
+                startActivity(intent);
+
             } else {
                 Toast.makeText(loginInActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }
