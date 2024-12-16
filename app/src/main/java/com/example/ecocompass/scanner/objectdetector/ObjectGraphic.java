@@ -10,7 +10,6 @@ import com.example.ecocompass.scanner.GraphicOverlay.Graphic;
 import com.google.mlkit.vision.objects.DetectedObject;
 import com.google.mlkit.vision.objects.DetectedObject.Label;
 
-/** Draw the detected object info in preview. */
 public class ObjectGraphic extends Graphic {
 
   private static final float TEXT_SIZE = 54.0f;
@@ -53,14 +52,12 @@ public class ObjectGraphic extends Graphic {
 
   @Override
   public void draw(Canvas canvas) {
-    // Decide color based on object tracking ID
     int colorID =
             object.getTrackingId() == null ? 0 : Math.abs(object.getTrackingId() % NUM_COLORS);
     float textWidth = 0;
     float lineHeight = TEXT_SIZE + STROKE_WIDTH;
     float yLabelOffset = -lineHeight;
 
-    // Determine if the item is recyclable based on its label
     for (Label label : object.getLabels()) {
       String itemName = label.getText();
       String recyclable;
@@ -73,7 +70,6 @@ public class ObjectGraphic extends Graphic {
         recyclable = "Unknown";
       }
 
-      // Calculate the text width to ensure proper spacing
       textWidth = Math.max(textWidth, textPaints[colorID].measureText("Item: " + itemName));
       textWidth = Math.max(textWidth, textPaints[colorID].measureText("Recyclable: " + recyclable));
       yLabelOffset -= 2 * lineHeight;

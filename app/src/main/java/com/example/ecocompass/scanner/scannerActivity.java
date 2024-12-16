@@ -25,7 +25,6 @@ import java.io.IOException;
 import com.example.ecocompass.R;
 import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
 
 import com.example.ecocompass.scanner.objectdetector.ObjectDetectorProcessor;
 
@@ -34,23 +33,16 @@ public class scannerActivity extends AppCompatActivity {
         private static final String OBJECT_DETECTION = "Object Detection";
         private static final String OBJECT_DETECTION_CUSTOM = "Custom Object Detection";
         private static final String SIZE_SCREEN = "w:screen"; // Match screen width
-        private static final String SIZE_1024_768 = "w:1024"; // ~1024*768 in a normal ratio
-        private static final String SIZE_640_480 = "w:640"; // ~640*480 in a normal ratio
         private static final String SIZE_ORIGINAL = "w:original"; // Original image size
-
         private static final String KEY_IMAGE_URI = "com.google.mlkit.vision.demo.KEY_IMAGE_URI";
         private static final String KEY_SELECTED_SIZE = "com.google.mlkit.vision.demo.KEY_SELECTED_SIZE";
-
         private static final int REQUEST_IMAGE_CAPTURE = 1001;
         private static final int REQUEST_CHOOSE_IMAGE = 1002;
-
         private ImageView preview;
         private GraphicOverlay graphicOverlay;
         private String selectedMode = OBJECT_DETECTION;
         private String selectedSize = SIZE_SCREEN;
-
         boolean isLandScape;
-
         private Uri imageUri;
         private int imageMaxWidth;
         private int imageMaxHeight;
@@ -65,7 +57,6 @@ public class scannerActivity extends AppCompatActivity {
             findViewById(R.id.select_image_button)
                     .setOnClickListener(
                             view -> {
-                                // Menu for selecting either: a) take new photo b) select from existing
                                 PopupMenu popup = new PopupMenu(scannerActivity.this, view);
                                 popup.setOnMenuItemClickListener(
                                         menuItem -> {
@@ -254,22 +245,8 @@ public class scannerActivity extends AppCompatActivity {
             int targetWidth;
             int targetHeight;
 
-            switch (selectedSize) {
-                case SIZE_SCREEN:
-                    targetWidth = imageMaxWidth;
-                    targetHeight = imageMaxHeight;
-                    break;
-                case SIZE_640_480:
-                    targetWidth = isLandScape ? 640 : 480;
-                    targetHeight = isLandScape ? 480 : 640;
-                    break;
-                case SIZE_1024_768:
-                    targetWidth = isLandScape ? 1024 : 768;
-                    targetHeight = isLandScape ? 768 : 1024;
-                    break;
-                default:
-                    throw new IllegalStateException("Unknown size");
-            }
+            targetWidth = imageMaxWidth;
+            targetHeight = imageMaxHeight;
 
             return new Pair<>(targetWidth, targetHeight);
         }
@@ -279,27 +256,14 @@ public class scannerActivity extends AppCompatActivity {
                 imageProcessor.stop();
             }
             try {
-                switch (selectedMode) {
-                    case OBJECT_DETECTION:
-                        Log.i(TAG, "Using Object Detector Processor");
-                        ObjectDetectorOptions objectDetectorOptions =
-                                PreferenceUtils.getObjectDetectorOptionsForStillImage(this);
-                        imageProcessor = new ObjectDetectorProcessor(this, objectDetectorOptions);
-                        break;
-                    case OBJECT_DETECTION_CUSTOM:
-                        Log.i(TAG, "Using Custom Object Detector Processor");
-                        LocalModel localModel =
-                                new LocalModel.Builder()
-                                        .setAssetFilePath("custom_models/object_labeler.tflite")
-                                        .build();
-                        CustomObjectDetectorOptions customObjectDetectorOptions =
-                                PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel);
-                        imageProcessor = new ObjectDetectorProcessor(this, customObjectDetectorOptions);
-                        break;
-                        // fall through
-                    default:
-                        Log.e(TAG, "Unknown selectedMode: " + selectedMode);
-                }
+                Log.i(TAG, "Using Custom Object Detector Processor");
+                LocalModel localModel =
+                        new LocalModel.Builder()
+                                .setAssetFilePath("custom_models/object_labeler.tflite")
+                                .build();
+                CustomObjectDetectorOptions customObjectDetectorOptions =
+                        PreferenceUtils.getCustomObjectDetectorOptionsForStillImage(this, localModel);
+                imageProcessor = new ObjectDetectorProcessor(this, customObjectDetectorOptions);
             } catch (Exception e) {
                 Log.e(TAG, "Can not create image processor: " + selectedMode, e);
                 Toast.makeText(
