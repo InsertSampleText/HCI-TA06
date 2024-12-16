@@ -1,7 +1,7 @@
 # Eco-Compass App
 Eco-Compass is an app to help you recycle smarter. Using our app will help you learn how to recycle in delaware and keep recycling. We want you to be able to quickly learn what can, and how to recycle better. 
 
-Enjoy recycling! 
+Enjoy recycling! ♻️ 😁
 
 
 
